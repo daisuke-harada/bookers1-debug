@@ -10,11 +10,6 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get new" do
-    get new_book_url
-    assert_response :success
-  end
-
   test "should create book" do
     assert_difference('Book.count') do
       post books_url, params: { book: { body: @book.body, title: @book.title } }
